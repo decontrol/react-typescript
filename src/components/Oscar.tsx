@@ -1,4 +1,7 @@
-const Oscar = () => {
-	return <div>Oscar</div>
+type OscarProps = {
+	children: React.ReactNode
 }
-export default Oscar
+
+export const Oscar = (props: OscarProps) => {
+	return <div>{props.children}</div>
+}

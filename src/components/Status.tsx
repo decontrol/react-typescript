@@ -1,17 +1,17 @@
 type StatusProps = {
-	status: string
+	status: 'loading' | 'success' | 'error'
 }
 
-const Status = (props: StatusProps) => {
+export const Status = (props: StatusProps) => {
 	let message
 	let textColor
 
 	if (props.status === 'loading') {
 		message = 'Loading...'
-		textColor = 'green'
+		textColor = 'pink'
 	} else if (props.status === 'success') {
 		message = 'Data fetched successfully'
-		textColor = 'blue'
+		textColor = 'green'
 	} else if (props.status === 'error') {
 		message = 'Error fetching data '
 		textColor = 'red'
@@ -22,4 +22,3 @@ const Status = (props: StatusProps) => {
 		</div>
 	)
 }
-export default Status
